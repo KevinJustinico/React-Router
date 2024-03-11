@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import '../index.css'
 
+
 function TodoList({ todos, setTodos }) {
   const handleDeleteTodo = (id) => {
     setTodos(todos.filter(todo => todo.id !== id));
@@ -19,9 +20,10 @@ function TodoList({ todos, setTodos }) {
         {todos.map(todo => (
           <li key={todo.id}>
             <h3>{todo.title}</h3>
-            <p>{todo.description}</p>
-            <p>Creation Date: {new Date(todo.creationDate).toLocaleDateString()}</p>
             <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
+            <Link to={`/todo/${todo.id}`}>
+              <button>Details</button>
+            </Link>
           </li>
         ))}
       </ul>

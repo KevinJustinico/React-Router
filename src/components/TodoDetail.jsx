@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import '../styles.css'
 
 function TodoDetail() {
 
@@ -9,14 +10,15 @@ function TodoDetail() {
   };
 
   return (
-    <div>
+    <div className='container'>
       <h1>Todo Detail</h1>
       <p>Title: {todo.title}</p>
       <p>Description: {todo.description}</p>
       <p>Created At: {todo.createdAt}</p>
-      <Link to="/">Back to Home</Link>
+      <Link to="/"><button>Back to Home</button></Link>
     </div>
   );
 }
 
 export default TodoDetail;
+

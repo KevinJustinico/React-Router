@@ -58,9 +58,10 @@ function TodoNew({ handleAddTodo }) {
         </div>
         <button type="submit">Create</button>
       </form>
-      <button>
-      <Link to="/">Back to Home</Link>
-      </button>
+      <Link to="/">
+        <button>Back to Home
+      </button></Link>
+      
     </div>
   );
 }
